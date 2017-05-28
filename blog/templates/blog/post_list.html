@@ -4,31 +4,14 @@
 	</head>
 	<body>
 		<div>
-			<h1><a href="">Minimalizm</a></h1>
-			<p>published:28.05.2017</p>
-			<h2>Od nadmiaru glowa boli!</h2>
-			<p>Pierwszy w życiu blog powstały na ...</p>
+			<h1>Minimalizm</h1>
 		</div>
-
-		<div>
-			<p>published:28.05.2017</p>
-			<h3><a href="">Wprowadzenie</a></h3>
-		</div>
-
-		<div>
-			<h4>Punkt 1</h4>
-			<h5>Punkt 2</h5>
-			<h6>Punkt 3</h6>
-			<em>tekst</em>
-		</div>
-
-	<br />
-		<div>
-			<a href="https://djangogirls.org">link do djangogirls!</a>
-			<ul><li>pierwsza pozycja</li><li>druga pozycja</li></ul>
-			<strong>text</strong>
-		    <p>Hej!</p>
-		    <p>Dziala jak natura chciala!</p>
-   		</div>
-    </body?
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+		    </body>
 </html>
